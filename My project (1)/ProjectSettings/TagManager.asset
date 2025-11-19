@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - place_coffi_cup
+  - Coffe
   layers:
   - Default
   - TransparentFX
