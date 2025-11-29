@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - ScriptTag
+  - Coffe_cup
+  - Coffe_tablet
+  - Coffe_cup_cap
   layers:
   - Default
   - TransparentFX
