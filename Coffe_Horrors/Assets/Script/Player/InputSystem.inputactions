@@ -77,6 +77,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DoorInterakt",
+                    "type": "Button",
+                    "id": "2f44cf6e-5dcc-45c9-adfb-976c8b0ce694",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -266,6 +275,17 @@
                     "action": "Intaractive",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "0e70b2b7-6d0d-4e64-ba52-f46f8edeb963",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard & Mouse",
+                    "action": "DoorInterakt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

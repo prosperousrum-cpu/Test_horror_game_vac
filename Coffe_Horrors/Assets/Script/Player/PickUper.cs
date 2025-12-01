@@ -36,7 +36,7 @@ namespace Player
             _inputSystem.Player.Trow.performed += Throw;
 
             _inputSystem.Player.Intaractive.performed += PickUp;
-            _inputSystem.Player.Intaractive.canceled -= Drop;
+            //_inputSystem.Player.Intaractive.canceled += Drop;
 
             _inputSystem.Player.Intaractive.performed += Interact;
 

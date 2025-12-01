@@ -8,6 +8,7 @@ TagManager:
   - Coffe_cup
   - Coffe_tablet
   - Coffe_cup_cap
+  - ready_Cofffe
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - CanPickUper
   - Interactive
-  - 
+  - DoorOpen
   - 
   - 
   - 

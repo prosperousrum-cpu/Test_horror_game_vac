@@ -2,7 +2,7 @@
 - Project name: Coffe_Horrors
 - Unity version: Unity 6000.2.12f1
 - Active game object:
-  - Name: tkawaycupcoffee
+  - Name: Cube (1)
   - Tag: Untagged
-  - Layer: CanPickUper
+  - Layer: DoorOpen
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

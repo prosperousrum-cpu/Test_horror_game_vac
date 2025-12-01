@@ -163,6 +163,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DoorInterakt"",
+                    ""type"": ""Button"",
+                    ""id"": ""2f44cf6e-5dcc-45c9-adfb-976c8b0ce694"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -352,6 +361,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Intaractive"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e70b2b7-6d0d-4e64-ba52-f46f8edeb963"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard & Mouse"",
+                    ""action"": ""DoorInterakt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -407,6 +427,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Player_Trow = m_Player.FindAction("Trow", throwIfNotFound: true);
         m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
         m_Player_Intaractive = m_Player.FindAction("Intaractive", throwIfNotFound: true);
+        m_Player_DoorInterakt = m_Player.FindAction("DoorInterakt", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -495,6 +516,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Trow;
     private readonly InputAction m_Player_Zoom;
     private readonly InputAction m_Player_Intaractive;
+    private readonly InputAction m_Player_DoorInterakt;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -538,6 +560,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Intaractive".
         /// </summary>
         public InputAction @Intaractive => m_Wrapper.m_Player_Intaractive;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/DoorInterakt".
+        /// </summary>
+        public InputAction @DoorInterakt => m_Wrapper.m_Player_DoorInterakt;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -588,6 +614,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Intaractive.started += instance.OnIntaractive;
             @Intaractive.performed += instance.OnIntaractive;
             @Intaractive.canceled += instance.OnIntaractive;
+            @DoorInterakt.started += instance.OnDoorInterakt;
+            @DoorInterakt.performed += instance.OnDoorInterakt;
+            @DoorInterakt.canceled += instance.OnDoorInterakt;
         }
 
         /// <summary>
@@ -623,6 +652,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Intaractive.started -= instance.OnIntaractive;
             @Intaractive.performed -= instance.OnIntaractive;
             @Intaractive.canceled -= instance.OnIntaractive;
+            @DoorInterakt.started -= instance.OnDoorInterakt;
+            @DoorInterakt.performed -= instance.OnDoorInterakt;
+            @DoorInterakt.canceled -= instance.OnDoorInterakt;
         }
 
         /// <summary>
@@ -758,5 +790,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnIntaractive(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DoorInterakt" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDoorInterakt(InputAction.CallbackContext context);
     }
 }
