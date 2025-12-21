@@ -73,6 +73,6 @@ public class DoorOpenScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        _inputSystem.Player.PickUp.performed -= Open_door;
+        _inputSystem.Player.DoorInterakt.performed -= Open_door;
     }
 }
